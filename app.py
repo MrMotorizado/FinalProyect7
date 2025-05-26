@@ -1,6 +1,8 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+import numpy as np
+
 #Encabezado
 st.header('Analisis de datos de vehiculos de EE.UU')
 
@@ -23,7 +25,7 @@ if build_histogram: # si la casilla de verificación está seleccionada
     st.plotly_chart(fig2, use_container_width=True)
 
 scatter_plot = st.checkbox('Mostrar gráfico de dispersión')
-
+# casilla 2
 if scatter_plot:
     st.write('Gráfico de dispersión entre "model_year" y "price"')
     fig3 = px.scatter(car_data, x='model_year', y='price', title='Precio vs Año del Modelo')
